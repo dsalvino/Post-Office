@@ -11,9 +11,6 @@ $('select[name="form-change"]').on('change', function () {
             $('.addCall').hide();
             $('.updateCall').show();
             break;
-        default:
-            $('.updateCall').hide();
-            $('.AddCall').hide();
     }
 });
 
