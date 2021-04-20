@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.block {
+    color: white;
+    background-color: black;
+    padding: 5%;
+}
+
+.block-1 {
+    background-color: #324376;
+}
+
+.full-page {
+    height: 100vh;
+}
+
+.block-2 {
+    background-color: white;
+    color: black;
+}
+
+.half-width {
+    width: 50% !important;
+}
+
+.addCall, .updateCall {
+    display: none;
+}
+
+img {
+    width: 25%;
+}

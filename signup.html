@@ -26,7 +26,7 @@ cvv
             $.ajax({
                 type: 'POST',
                 url: API_URL,
-                data: $("#customer-form").serialize(),
+                body: $("#customer-form").serialize(),
                 datatype: 'json',
                 success: function(data) {
                     alert($("#customer-form").serialize());
