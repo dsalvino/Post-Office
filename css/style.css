@@ -35,3 +35,7 @@ html, body {
 .addCall, .updateCall {
     display: none;
 }
+
+img {
+    width: 25%;
+}
