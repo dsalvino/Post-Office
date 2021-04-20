@@ -1,39 +1,54 @@
-email, fname, lname
-cc info
-cvv
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Sign Up</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Signup</title>
 </head>
-    <body>
-    <h2>Welcome, please make an account below.</h2>
-    <form id="customer-form">
-        Email: <input type="email" name="email"/><br/>
-        First Name: <input type="text" name="fname"/><br/>
-        Last Name: <input type= "text" name="lname"/><br/>
 
-        <!-- Yes, please add my credit card. <input type="checkbox" onchange="console.log('changed');" id="cc-option"/> -->
-        <br/>
-        <input type="submit" value="Submit"/>
-    </form>
-
-    <script type="text/javascript">
-        var API_URL = "https://i645of8oc3.execute-api.us-east-2.amazonaws.com/Beta/customers";
-        $("#customer-form").on("submit", function(e) {
-            $.ajax({
-                type: 'POST',
-                url: API_URL,
-                data: $("#customer-form").serialize(),
-                datatype: 'json',
-                success: function(data) {
-                    alert($("#customer-form").serialize());
-                }
-            });
-            e.preventDefault();
-        });
-    </script>
+<body>
+    <div class="full-page block-1">
+        <img src="./assets/Fedex-logo.png" alt="Absolutely FedUp" class="imgSignUp py-5">
+        <div class="h-75 d-flex justify-content-center align-items-center">
+            
+            <form class="col-md-5 form-background needs-validation" id="customer-form">
+                <div class="mx-auto my-auto">
+                    <h3>Welcome, please make an account below</h3>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Username:</label>
+                    <div class="col-sm-10">
+                        <input type="username" class="form-control" id="inputUsername3" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" required>
+                    </div>
+                    <div class="d-grid gap-1 mx-auto col-4 mt-3">
+                        <button class="btn btn-primary" type="submit">Sign up!</button>
+                    </div>
+                </div>
+        </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="/js/index.js"></script>
+
 </html>
