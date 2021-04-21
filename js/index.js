@@ -1,3 +1,5 @@
+var API_URL = "https://i645of8oc3.execute-api.us-east-2.amazonaws.com/Beta/customers";
+
 $('select[name="form-change"]').on('change', function () {
     const switchForms = $(this).val();
     switch (switchForms) {
@@ -9,17 +11,18 @@ $('select[name="form-change"]').on('change', function () {
             $('.addCall').hide();
             $('.updateCall').show();
             break;
-        default:
-            $('.updateCall').hide();
-            $('.AddCall').hide();
     }
 });
 
-// $('select[name="form-change"]').change(function() {
-//     if ($(this).val() === "Add") {
-//         $('#addCall').show();
-//         $('#updateCall').hide();
-//     } else {
-//         $
-//     }
-// })
+$("#customer-form").on("submit", function (e) {
+    $.ajax({
+        type: 'POST',
+        url: API_URL,
+        data: $("#customer-form").serialize(),
+        datatype: 'json',
+        success: function (data) {
+            alert($("#customer-form").serialize());
+        }
+    });
+    e.preventDefault();
+});
