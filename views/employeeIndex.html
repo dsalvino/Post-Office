@@ -26,6 +26,9 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./customerIndex.html">Customer View</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" id="logout" aria-current="page" href="../index.html">logout</a>
           </li>
         </ul>
@@ -42,13 +45,13 @@
     <h2 class="mb-5">What do you want to do?</h2>
     <select class="form-select ms-auto me-auto half-width" aria-label="Default" name="form-change">
       <option selected disabled value="">Select Here!</option>
-      <option value="Add">Add a Package</option>
-      <option value="Update">Update a Package</option>
+      <option value="viewPkgLocations">View package at certain locations</option>
+      <option value="delete" id="delete">DELETE EMPLOYEE</option>
     </select>
   </div>
   <!-- add
-  tracking number, return address, shipping address, receiver email -->
-  <div class="addCall" id="addCall">
+  something -->
+  <div class="viewPkgLocationsCall" id="viewPkgLocationsCall">
     <form class="needs-validation" id="addPkg">
       <div class="input-group half-width mx-auto py-1">
         <input type="text" class="form-control" id="validationDefault01" placeholder="Receiver Email" aria-label="Email"
@@ -69,25 +72,14 @@
   </div>
   <!-- update
   tracking number, new status -->
-  <div class="updateCall" id="updateCall">
+  <div class="killEmployeeCall" id="killEmployeeCall">
     <form class="needs-validation">
       <div class="input-group half-width mx-auto py-1">
-        <input type="text" class="form-control" id="validationDefault01" placeholder="Tracking Number"
-          aria-label="Tracking" aria-describedby="basic-addon1" required>
+        <input type="text" class="form-control" id="validationDefault01" aria-label="terminateEmployee" placeholder="Enter Employee Name"
+          aria-describedby="basic-addon1" required>
       </div>
-      <select class="form-select mx-auto py-1 half-width" aria-label="Default" id="validationDefault03"
-        name="form-change" required>
-        <option selected disabled value="">Select new Status</option>
-        <option value="Created">Label Created</option>
-        <option value="Transit">In Transit</option>
-        <option value="OutFor">Out for Delivery</option>
-        <option value="Delivered">Delivered</option>
-        <option value="Received">Received</option>
-        <option value="Lost">Lost</option>
-      </select>
       <div class="d-grid gap-2 mx-auto col-6 py-1">
-        <button class="btn btn-primary" id="btnSubmit" type="submit">Update Status!</button>
-     
+        <button class="btn btn-danger" id="btnSubmit" type="submit">TERMINATE</button>
       </div>
     </form>
   </div>

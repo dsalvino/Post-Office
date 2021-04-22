@@ -39,7 +39,7 @@ html, body {
     width: 25%;
 }
 
-.addCall, .updateCall {
+.addCall, .updateCall, .statusCall, .locationsCall, .viewPkgLocationsCall, .killEmployeeCall {
     display: none;
 }
 
@@ -68,6 +68,10 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     
+}
+
+#delete {
+    background-color: red;
 }
 
 td {

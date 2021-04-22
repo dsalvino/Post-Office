@@ -43,11 +43,12 @@
     <select class="form-select ms-auto me-auto half-width" aria-label="Default" name="form-change">
       <option selected disabled value="">Select Here!</option>
       <option value="Add">Add a Package</option>
-      <option value="Update">Update a Package</option>
+      <option value="Track">Request tracking history</option>
+      <option value="Office">View Office locations</option>
     </select>
   </div>
   <!-- add
-  tracking number, return address, shipping address, receiver email -->
+  new package -->
   <div class="addCall" id="addCall">
     <form class="needs-validation" id="addPkg">
       <div class="input-group half-width mx-auto py-1">
@@ -68,28 +69,22 @@
     </form>
   </div>
   <!-- update
-  tracking number, new status -->
-  <div class="updateCall" id="updateCall">
+  tracking number -->
+  <div class="statusCall" id="statusCall">
     <form class="needs-validation">
       <div class="input-group half-width mx-auto py-1">
         <input type="text" class="form-control" id="validationDefault01" placeholder="Tracking Number"
           aria-label="Tracking" aria-describedby="basic-addon1" required>
       </div>
-      <select class="form-select mx-auto py-1 half-width" aria-label="Default" id="validationDefault03"
-        name="form-change" required>
-        <option selected disabled value="">Select new Status</option>
-        <option value="Created">Label Created</option>
-        <option value="Transit">In Transit</option>
-        <option value="OutFor">Out for Delivery</option>
-        <option value="Delivered">Delivered</option>
-        <option value="Received">Received</option>
-        <option value="Lost">Lost</option>
-      </select>
       <div class="d-grid gap-2 mx-auto col-6 py-1">
-        <button class="btn btn-primary" id="btnSubmit" type="submit">Update Status!</button>
-     
+        <button class="btn btn-primary" id="btnSubmit" type="submit">Request Status!</button>
       </div>
     </form>
+  </div>
+  <div class="locationsCall" id="locationsCall">
+    <div class="d-grid gap-2 mx-auto col-6 py-1">
+      <button class="btn btn-primary" id="btnSubmit" type="submit">:)</button>
+    </div>
   </div>
 
 
