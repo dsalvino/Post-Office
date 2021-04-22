@@ -39,6 +39,10 @@ html, body {
     width: 25%;
 }
 
+#postOfficeTable  {
+    width: 100%;
+}
+
 .addCall, .updateCall, .statusCall, .locationsCall, .viewPkgLocationsCall, .killEmployeeCall {
     display: none;
 }
@@ -74,6 +78,6 @@ h3 {
     background-color: red;
 }
 
-td {
+/* td {
     padding: 5px;
-}
+} */
