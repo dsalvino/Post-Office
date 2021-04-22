@@ -45,28 +45,20 @@
     <h2 class="mb-5">What do you want to do?</h2>
     <select class="form-select ms-auto me-auto half-width" aria-label="Default" name="form-change">
       <option selected disabled value="">Select Here!</option>
-      <option value="viewPkgLocations">View package at certain locations</option>
+      <option value="viewPkgLocations">View packages at location</option>
       <option value="delete" id="delete">DELETE EMPLOYEE</option>
     </select>
   </div>
   <!-- add
   something -->
   <div class="viewPkgLocationsCall" id="viewPkgLocationsCall">
-    <form class="needs-validation" id="addPkg">
+    <form class="needs-validation" id="viewPkgAtLocation" action="./showpackages.html">
       <div class="input-group half-width mx-auto py-1">
-        <input type="text" class="form-control" id="validationDefault01" placeholder="Receiver Email" aria-label="Email"
-          aria-describedby="basic-addon1" required>
+        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter address here"
+          aria-label="shippingAddress" aria-describedby="basic-addon1" required>
       </div>
-      <div class="input-group half-width mx-auto py-1">
-        <input type="text" class="form-control" id="validationDefault01" placeholder="Shipping Address" aria-label="To"
-          aria-describedby="basic-addon1" required>
-      </div>
-      <div class="input-group half-width mx-auto py-1">
-        <input type="text" class="form-control" id="validationDefault01" placeholder="Return Address"
-          aria-label="Return" aria-describedby="basic-addon1" required>
-      </div>
-      <div class="d-grid gap-2 mx-auto col-6">
-        <button class="btn btn-primary" id="btnSubmit" type="submit">Add Package!</button>
+      <div class="d-grid gap-2 mx-auto col-6 py-1">
+        <button class="btn btn-primary" id="btnSubmit" type="submit">View Packages!</button>
       </div>
     </form>
   </div>
