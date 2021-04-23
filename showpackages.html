@@ -55,7 +55,9 @@
 
   <script>
       $(document).ready(function() {
-          var API_URL = "https://dw5ii1jbse.execute-api.us-east-2.amazonaws.com/test/list-packages";
+        const urlParams = new URLSearchParams(window.location.search);
+        const myPlaceID = urlParams.get('id');
+          var API_URL = "https://dw5ii1jbse.execute-api.us-east-2.amazonaws.com/test/list-packages?id=" + myPlaceID;
           $.ajax({url: API_URL, success: function(res) {
             for (var i=0; i < res.length; i++) {
                 $("#package-table").append("<tr>");
