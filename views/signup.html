@@ -27,9 +27,15 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Username:</label>
+                    <label for="inputFirstname3" class="col-sm-2 col-form-label">First Name:</label>
                     <div class="col-sm-10">
-                        <input type="username" class="form-control" id="inputUsername3" required>
+                        <input type="Firstname" class="form-control" id="inputFirstname3" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputLastname3" class="col-sm-2 col-form-label">Last Name:</label>
+                    <div class="col-sm-10">
+                        <input type="Lastname" class="form-control" id="inputLastname3" required>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -58,5 +64,15 @@
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
     integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <script src="../js/index.js"></script>
+<script>
+    $("#customer-form").on('submit', function(e) {
+        var API_URL = "https://dw5ii1jbse.execute-api.us-east-2.amazonaws.com/test/customer/add?fname=" + $("#inputFirstname3").val() + "&lname=" + $("#inputLastname3").val() + "&email=" + $("#inputEmail3").val() + "&password=" + $("#inputPassword3").val() + "&type=" + document.querySelector('input[name="inlineRadioOptions"]:checked').value;;
+        console.log(API_URL);
+        $.ajax({url: API_URL, success: function(res) {
+            
+        }});
+        e.preventDefault();
+    })
+</script>
 
 </html>
