@@ -62,13 +62,17 @@
   <!-- update
   tracking number, new status -->
   <div class="killEmployeeCall" id="killEmployeeCall">
-    <form class="needs-validation">
+    <form class="needs-validation" id="terminate">
       <div class="input-group half-width mx-auto py-1">
-        <input type="text" class="form-control" id="validationDefault01" aria-label="terminateEmployee" placeholder="Enter Employee Name"
-          aria-describedby="basic-addon1" required>
+        <select class="form-select" aria-label="Shipping Cost" required>
+          <option selected disabled value="">Select Employee</option>
+          <option value="1">Dave North</option>
+          <option value="2">Kany Weast</option>
+          <option value="3">Kornio kapaton</option>
+        </select>
       </div>
       <div class="d-grid gap-2 mx-auto col-6 py-1">
-        <button class="btn btn-danger" id="btnSubmit" type="submit">TERMINATE</button>
+        <button class="btn btn-danger" id="btnTerminate" type="submit">TERMINATE</button>
       </div>
     </form>
   </div>

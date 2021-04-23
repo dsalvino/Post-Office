@@ -51,6 +51,12 @@ $("#customer-form").on("submit", function (e) {
     e.preventDefault();
 });
 
+$('#terminate').on('submit', function (e) {
+    alert('Employee Terminated!');
+    location.href =  '../views/employeeIndex.html'
+    e.preventDefault();
+});
+
 //show packages
 $(document).ready(function () {
     var API_URL = "https://dw5ii1jbse.execute-api.us-east-2.amazonaws.com/test/list-packages";
